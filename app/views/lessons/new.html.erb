@@ -1,0 +1,15 @@
+<% content_for :banner do %>
+	<h3 id="part_1_">選擇動作</h3>
+	<%= link_to('返回目錄', lessons_url) %>
+<% end %>
+<h3 id="part_1_">新增課程</h3>
+<%= simple_form_for(@lesson) do |f| %>
+	<%= f.input :title, :label=>'課程名稱: ' %><br>
+	<%= f.input :lv, :label=>'所屬單元: '  %><br>
+	<%= f.input :content, :label=>'內容'  %><br>
+	<%= f.submit '建立' ,:disable_with =>'建立ing'%>
+<% end %>
+
+
+
+

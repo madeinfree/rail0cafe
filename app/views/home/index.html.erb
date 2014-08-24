@@ -1,0 +1,19 @@
+<% content_for :banner do %>
+  <h3 id="part_1_">其他連結</h3><p>
+  <div id="submenu">
+    <h3><%= link_to("關於本站", home_path(:id =>'1')) %></h3>
+    <h3><%= link_to("關於作者", '#') %></h3>
+    <h3><%= link_to("常見問題", '#') %></h3>
+  </div>
+<% end %>
+<% @lesson_group.each do |human_level, lessons| %>
+<h3 id="part_1_"><%= human_level %></h3>
+<ol>
+  <% lessons.each do |lesson| %>
+  	<li><em><%= link_to(lesson.title, home_path(lesson)) %></em></li>
+  <% end %>
+</ol>
+<% end %>
+
+
+

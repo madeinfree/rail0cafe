@@ -1,0 +1,12 @@
+<% content_for :banner do %>
+	<h3 id="part_1_">選擇動作</h3>
+	<%= link_to("新增課程", new_lesson_path, :class =>"aaa") %>
+<% end %>
+<h3 id="part_1_">課程管理</h3>
+<ul>
+	<% @lessons.each do |p| %>
+		<li><em><%= p.title %></em>
+			<%= link_to('修改內容',edit_lesson_path(p)) %>
+		</li>
+	<% end %>
+</ul>
